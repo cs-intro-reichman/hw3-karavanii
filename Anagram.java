@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /** Functions for checking if a given string is an anagram. */
 public class Anagram {
 	public static void main(String args[]) {
@@ -12,7 +14,6 @@ public class Anagram {
 		
 		// Tests the randomAnagram function.
 		System.out.println("silent and " + randomAnagram("silent") + " are anagrams.");
-		
 		// Performs a stress test of randomAnagram 
 		String str = "1234567";
 		Boolean pass = true;
@@ -28,22 +29,35 @@ public class Anagram {
 
 	// Returns true if the two given strings are anagrams, false otherwise.
 	public static boolean isAnagram(String str1, String str2) {
-		// Replace the following statement with your code
-		return false;
+		str1 = str1.toLowerCase().replaceAll("[^a-z]", "");
+		str2 = str2.toLowerCase().replaceAll("[^a-z]", "");
+		char[] charstr1 = str1.toCharArray();
+		char[] charstr2 = str2.toCharArray();
+		Arrays.sort(charstr1);
+		Arrays.sort(charstr2);
+		return Arrays.equals(charstr1, charstr2);
+		
 	}
 	   
 	// Returns a preprocessed version of the given string: all the letter characters are converted
 	// to lower-case, and all the other characters are deleted, except for spaces, which are left
 	// as is. For example, the string "What? No way!" becomes "whatnoway"
 	public static String preProcess(String str) {
-		// Replace the following statement with your code
-		return "";
+		str = str.toLowerCase().replaceAll("[^a-z]", "");
+		return str;
 	} 
 	   
 	// Returns a random anagram of the given string. The random anagram consists of the same
 	// characters as the given string, re-arranged in a random order. 
 	public static String randomAnagram(String str) {
-		// Replace the following statement with your code
-		return "";
+		char[] characters = str.toCharArray();
+    	int n = characters.length;
+   		 for (int i = n - 1; i > 0; i--) {
+        int j = (int) (Math.random() * (i + 1));
+        char temp = characters[i];
+        characters[i] = characters[j];
+        characters[j] = temp;
+    }
+    return new String(characters);
 	}
 }
