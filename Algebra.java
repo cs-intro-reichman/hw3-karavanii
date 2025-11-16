@@ -103,33 +103,33 @@ public class Algebra {
 		if (x1>0 && x2 >0) {
 			int count =0;
 			while (x1>=x2) {
-				x1 = x1-x2;
+				x1 =minus(x1, x2);
 				count++;
 			}
 			return count;
 		}
 		else if(x1>=0){
-			x2 = times(-1, x2);
+			x2 = times(minus(1,2), x2);
 			int count =0;
 			while (x1>=x2) {
-				x1 = x1-x2;
+				x1 =minus(x1, x2);
 				count++;
 			}
-			return times(count, -1);
+			return times(count, minus(1,2));
 		}else if(x2>0){
 			int count =0;
-			x1 = times(x1, -1);
+			x1 = times(x1, minus(1,2));
 			while (x1>=x2) {
-				x1 = x1-x2;
+				x1 = minus(x1, x2);
 				count++;
 			}
-			return times(-1, count);
+			return times(minus(1,2), count);
 		}else{
-			x1 = times(-1, x1);
-			x2 = times(-1, x2);
+			x1 = times(minus(1,2), x1);
+			x2 = times(minus(1,2), x2);
 			int count =0;
 			while (x1>=x2) {
-				x1 = x1-x2;
+				x1 = minus(x1, x2);
 				count++;
 			}
 			return count;
@@ -145,25 +145,25 @@ public class Algebra {
 		if (x1>0 && x2 >0) {
 		//	int count =0;
 			while (x1>=x2) {
-				x1 = x1-x2;
+				x1 = minus(x1, x2);
 		//		count++;
 			}
 			return x1;
 		//	return count;
 		}
 		else if(x1>=0){
-			x2 = times(-1, x2);
+			x2 = times(minus(1,2), x2);
 		//	int count =0;
 			while (x1>=x2) {
-				x1 = x1-x2;
+				x1 =minus(x1, x2);
 		//		count++;
 			}
 			return x1;
 		}else if(x2>0){
 		//	int count =0;
-			x1 = times(x1, -1);
+			x1 = times(x1, minus(1,2));
 			while (x1>=x2) {
-				x1 = x1-x2;
+				x1 = minus(x1, x2);
 		//		count++;
 			}
 			return x1;
@@ -172,7 +172,7 @@ public class Algebra {
 			x2 = times(-1, x2);
 		//	int count =0;
 			while (x1>=x2) {
-				x1 = x1-x2;
+				x1 =minus(x1, x2);
 		//		count++;
 			}
 			return x1;

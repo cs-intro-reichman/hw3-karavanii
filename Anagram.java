@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /** Functions for checking if a given string is an anagram. */
 public class Anagram {
 	public static void main(String args[]) {
@@ -28,8 +30,14 @@ public class Anagram {
 
 	// Returns true if the two given strings are anagrams, false otherwise.
 	public static boolean isAnagram(String str1, String str2) {
-		// Replace the following statement with your code
-		return false;
+		str1 = str1.toLowerCase().replaceAll("[^a-z]", "");;
+		str2 = str2.toLowerCase().replaceAll("[^a-z]", "");;
+		char[] charstr1 = str1.toCharArray();
+		char[] charstr2 = str2.toCharArray();
+		Arrays.sort(charstr1);
+		Arrays.sort(charstr2);
+		return Arrays.equals(charstr1, charstr2);
+		
 	}
 	   
 	// Returns a preprocessed version of the given string: all the letter characters are converted
