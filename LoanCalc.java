@@ -38,7 +38,6 @@ public class LoanCalc {
 		} 
 		return currentbalance;
 	}
-	
 	// Uses sequential search to compute an approximation of the periodical payment
 	// that will bring the ending balance of a loan close to 0.
 	// Given: the sum of the loan, the periodical interest rate (as a percentage),

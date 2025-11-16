@@ -14,7 +14,6 @@ public class Anagram {
 		
 		// Tests the randomAnagram function.
 		System.out.println("silent and " + randomAnagram("silent") + " are anagrams.");
-		
 		// Performs a stress test of randomAnagram 
 		String str = "1234567";
 		Boolean pass = true;

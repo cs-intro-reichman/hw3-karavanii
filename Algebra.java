@@ -179,7 +179,6 @@ public class Algebra {
 		//	return count;
 
 		}
-		
 	}	
 
 	// Returns the integer part of sqrt(x) 
