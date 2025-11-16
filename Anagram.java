@@ -29,8 +29,8 @@ public class Anagram {
 
 	// Returns true if the two given strings are anagrams, false otherwise.
 	public static boolean isAnagram(String str1, String str2) {
-		str1 = str1.toLowerCase().replaceAll("[^a-z]", "");;
-		str2 = str2.toLowerCase().replaceAll("[^a-z]", "");;
+		str1 = str1.toLowerCase().replaceAll("[^a-z]", "");
+		str2 = str2.toLowerCase().replaceAll("[^a-z]", "");
 		char[] charstr1 = str1.toCharArray();
 		char[] charstr2 = str2.toCharArray();
 		Arrays.sort(charstr1);
@@ -43,7 +43,7 @@ public class Anagram {
 	// to lower-case, and all the other characters are deleted, except for spaces, which are left
 	// as is. For example, the string "What? No way!" becomes "whatnoway"
 	public static String preProcess(String str) {
-		// Replace the following statement with your code
+		str = str.toLowerCase().replaceAll("[^a-z]", "")
 		return "";
 	} 
 	   
